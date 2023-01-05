@@ -1,0 +1,81 @@
+﻿<Window x:Class="zaliczenie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zaliczenie"
+        xmlns:viewModel ="clr-namespace:zaliczenie.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        >
+    
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
+    
+    <Border Background="#272527"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Planer budżetowy"
+                   VerticalAlignment="center"
+                   HorizontalAlignment="left"
+                   Foreground="white"
+                   FontSize="22"
+                   Margin=" 10,0,0,0"
+                   FontFamily="/Fonts/#Poppins"/>
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="home"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
+                <RadioButton Content="discovery"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DiscoveryViewCommand}"/>
+                <RadioButton Content="featured"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+            </StackPanel>
+            <TextBox Width="250"
+                     Height="40"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Style="{StaticResource ModernTextBox}"
+                   />
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+
+
+        </Grid>
+
+        
+    </Border>
+</Window>
