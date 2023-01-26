@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using zaliczenie.Core;
 
-
 namespace zaliczenie.MVVM.ViewModel
 {
-    internal class HomeViewModel
+    internal class TransakcjeViewModel
     {
     }
 }

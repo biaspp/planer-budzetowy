@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("zaliczenie")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("kasiaaaa")]
 [assembly: AssemblyProduct("zaliczenie")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]

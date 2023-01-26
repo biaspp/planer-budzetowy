@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="zaliczenie.MVVM.View.PrzychodView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:zaliczenie.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="#D4A373">
+
+    <StackPanel Margin="0,0,0,0 ">
+        <StackPanel Orientation="Vertical"
+                    Margin="0,10,20,10">
+            <Border Width="400"
+                Height="60"
+                    >
+                <Label Content="INFORMACJE O PRZYCHODZIE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045"/>
+
+            </Border>
+            <StackPanel Width="700"
+                Height="300"
+                Margin="0,10,0,10">
+
+                <StackPanel Orientation="horizontal"
+                                Margin="0,10,0,10"
+                                
+                                >
+                    <StackPanel Orientation="vertical"
+                                Margin="50,0,0,0">
+                        <Label Content="Nazwa przychodu" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045"/>
+                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045">
+                            <TextBox x:Name="prznazwa" TextWrapping="Wrap" Width="280" FontWeight="Normal"/>
+                        </Label>
+                    </StackPanel>
+                    <StackPanel Orientation="vertical"
+                                Margin="50,0,0,0">
+                        <Label Content="Kategoria" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045"/>
+                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045">
+                            <ComboBox x:Name="przkategoria" Width="280" BorderBrush="White" >
+                                <ComboBox.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="#FFF0F0F0"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </ComboBox.Background>
+                            </ComboBox>
+                        </Label>
+
+                    </StackPanel>
+
+
+                </StackPanel>
+                <StackPanel Orientation="horizontal"
+                                Margin="0,10,0,10"
+                                
+                                >
+                    <StackPanel Orientation="vertical"
+                                Margin="50,0,0,0">
+                        <Label Content="Kwota" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045"/>
+                        <Label x:Name="przkwota" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045">
+                            <TextBox TextWrapping="Wrap" Width="280"/>
+                        </Label>
+                    </StackPanel>
+                    <StackPanel Orientation="vertical"
+                                Margin="50,0,0,0">
+                        <Label Content="Data" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045"/>
+                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045">
+                            <DatePicker x:Name="przdata" Width="280" FontWeight="Medium"/>
+                        </Label>
+
+                    </StackPanel>
+
+
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Opis" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045"/>
+                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045">
+                        <TextBox x:Name="przopis" TextWrapping="Wrap" Width="325" Height="59"/>
+                    </Label>
+
+                </StackPanel>
+
+
+
+            </StackPanel>
+            <StackPanel Margin="0,0,0,0">
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Poppins" FontSize="22" FontWeight="Bold" Foreground="#FF5D6045">
+                    <Button x:Name="zapiszbtn" Content="Zapisz przychód " Width="200" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Background="#FFB98B73" Foreground="White" Cursor="Hand"/>
+                </Label>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

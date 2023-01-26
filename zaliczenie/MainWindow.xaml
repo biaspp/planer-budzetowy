@@ -17,10 +17,11 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    
-    
-    <Border Background="#272527"
-            CornerRadius="20">
+
+
+    <Border Background="#FEFAE0"
+            CornerRadius="20"
+            MouseDown="Border_MouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -34,39 +35,66 @@
             <TextBlock Text="Planer budżetowy"
                    VerticalAlignment="center"
                    HorizontalAlignment="left"
-                   Foreground="white"
-                   FontSize="22"
+                   Foreground="Black"
+                   FontSize="20"
                    Margin=" 10,0,0,0"
                    FontFamily="/Fonts/#Poppins"/>
             <StackPanel Grid.Row="1">
-                <RadioButton Content="home"
+                <RadioButton Content="Domek"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="discovery"
+                <RadioButton Content="Dodaj wydatek"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DiscoveryViewCommand}"/>
-                <RadioButton Content="featured"
+                             Command="{Binding WydatekViewCommand}"/>
+                <RadioButton Content="Dodaj przychód"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding PrzychodViewCommand}"/>
+                <RadioButton Content="Transakcje"
+                             Height="50"
+                             Foreground="Black"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding TransakcjeViewCommand}"/>
+                <RadioButton Content="Wykresiki"
+                             Height="50"
+                             Foreground="black"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding WykresikiViewCommand}"/>
 
             </StackPanel>
-            <TextBox Width="250"
-                     Height="40"
-                     VerticalContentAlignment="Center"
-                     HorizontalAlignment="left"
-                     Margin="5"
-                     Grid.Column="1"
-                     Style="{StaticResource ModernTextBox}"
-                   />
+            <Button Width="20"
+                    Height="20"
+                    VerticalContentAlignment="Top"
+                    HorizontalAlignment="right"
+                    Grid.Column="1"
+                    Content="🞫" 
+                    Margin="0,0,30,20" Background="{x:Null}"
+                    Foreground="black"
+                    Click="ZamknijButton_Click"
+                    />
+
+            <Button Width="20"
+                    Height="20"
+                    VerticalContentAlignment="Top"
+                    HorizontalAlignment="right"
+                    Grid.Column="1"
+                    Content="🗕"                    
+                    Margin="0,0,60,20" Background="{x:Null}"
+                    Foreground="black"
+                    Click="ButtonMinimize_Click"/>
+
+
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"

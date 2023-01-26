@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:zaliczenie.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="#1B1B1B">
+             Background="#FEFAE0">
     <Grid>
             
     </Grid>

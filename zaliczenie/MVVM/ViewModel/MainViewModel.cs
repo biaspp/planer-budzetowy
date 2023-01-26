@@ -6,18 +6,27 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using zaliczenie.Core;
 using System.Windows;
+using System.Data.SqlClient;
 
 namespace zaliczenie.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
-        
         public RelayCommand HomeViewCommand { get; set; }
-        public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand TransakcjeViewCommand { get; set; }
+        public RelayCommand WydatekViewCommand { get; set; }
+
+        public RelayCommand PrzychodViewCommand { get; set; }
+        public RelayCommand WykresikiViewCommand { get; set; }
 
 
         public HomeViewModel HomeVm { get; set; }
-        public DiscoveryViewModel DiscoveryVm { get; set; }
+        public TransakcjeViewModel TransakcjeVm { get; set; }
+
+        public WydatekViewModel WydatekVm { get; set; }
+        public PrzychodViewModel PrzychodVm { get; set; }
+
+        public WykresikiViewModel WykresikiVm { get; set; }
 
         private object _currentView;
 
@@ -34,9 +43,20 @@ namespace zaliczenie.MVVM.ViewModel
         }
 
         public MainViewModel()
+
         {
+            //wydatki
+            
+            //koniec wydatki
+
             HomeVm = new HomeViewModel();
-            DiscoveryVm = new DiscoveryViewModel();
+
+            TransakcjeVm = new TransakcjeViewModel();
+
+            WydatekVm = new WydatekViewModel();
+            PrzychodVm = new PrzychodViewModel();
+
+            WykresikiVm = new WykresikiViewModel();
 
             CurrentView = HomeVm;
 
@@ -45,9 +65,22 @@ namespace zaliczenie.MVVM.ViewModel
                 CurrentView = HomeVm;
             });
 
-            DiscoveryViewCommand = new RelayCommand(o =>
+            TransakcjeViewCommand = new RelayCommand(o =>
             {
-                CurrentView = DiscoveryVm;
+                CurrentView = TransakcjeVm;
+            });
+
+            WydatekViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = WydatekVm;
+            });
+            PrzychodViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = PrzychodVm;
+            });
+            WykresikiViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = WykresikiVm;
             });
         }
     }

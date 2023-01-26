@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="budzetDataSet" targetNamespace="http://tempuri.org/budzetDataSet.xsd" xmlns:mstns="http://tempuri.org/budzetDataSet.xsd" xmlns="http://tempuri.org/budzetDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="budzetConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="budzetConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.zaliczenie.Properties.Settings.GlobalReference.Default.budzetConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="budzetDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="budzetDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="budzetDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="wydatki" msprop:Generator_RowEvHandlerName="wydatkiRowChangeEventHandler" msprop:Generator_RowDeletedName="wydatkiRowDeleted" msprop:Generator_RowDeletingName="wydatkiRowDeleting" msprop:Generator_RowEvArgName="wydatkiRowChangeEvent" msprop:Generator_TablePropName="wydatki" msprop:Generator_RowChangedName="wydatkiRowChanged" msprop:Generator_RowChangingName="wydatkiRowChanging" msprop:Generator_TableClassName="wydatkiDataTable" msprop:Generator_RowClassName="wydatkiRow" msprop:Generator_TableVarName="tablewydatki" msprop:Generator_UserTableName="wydatki">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WydId" msprop:Generator_ColumnPropNameInRow="WydId" msprop:Generator_ColumnPropNameInTable="WydIdColumn" msprop:Generator_ColumnVarNameInTable="columnWydId" msprop:Generator_UserColumnName="WydId" type="xs:long" minOccurs="0" />
+              <xs:element name="WydNazwa" msprop:Generator_ColumnPropNameInRow="WydNazwa" msprop:Generator_ColumnPropNameInTable="WydNazwaColumn" msprop:Generator_ColumnVarNameInTable="columnWydNazwa" msprop:Generator_UserColumnName="WydNazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="WydKwota" msprop:Generator_ColumnPropNameInRow="WydKwota" msprop:Generator_ColumnPropNameInTable="WydKwotaColumn" msprop:Generator_ColumnVarNameInTable="columnWydKwota" msprop:Generator_UserColumnName="WydKwota" type="xs:long" minOccurs="0" />
+              <xs:element name="WydKat" msprop:Generator_ColumnPropNameInRow="WydKat" msprop:Generator_ColumnPropNameInTable="WydKatColumn" msprop:Generator_ColumnVarNameInTable="columnWydKat" msprop:Generator_UserColumnName="WydKat" type="xs:string" minOccurs="0" />
+              <xs:element name="WydData" msprop:Generator_ColumnPropNameInRow="WydData" msprop:Generator_ColumnPropNameInTable="WydDataColumn" msprop:Generator_ColumnVarNameInTable="columnWydData" msprop:Generator_UserColumnName="WydData" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WydOpis" msprop:Generator_ColumnPropNameInRow="WydOpis" msprop:Generator_ColumnPropNameInTable="WydOpisColumn" msprop:Generator_ColumnVarNameInTable="columnWydOpis" msprop:Generator_UserColumnName="WydOpis" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="przychody" msprop:Generator_RowEvHandlerName="przychodyRowChangeEventHandler" msprop:Generator_RowDeletedName="przychodyRowDeleted" msprop:Generator_RowDeletingName="przychodyRowDeleting" msprop:Generator_RowEvArgName="przychodyRowChangeEvent" msprop:Generator_TablePropName="przychody" msprop:Generator_RowChangedName="przychodyRowChanged" msprop:Generator_RowChangingName="przychodyRowChanging" msprop:Generator_TableClassName="przychodyDataTable" msprop:Generator_RowClassName="przychodyRow" msprop:Generator_TableVarName="tableprzychody" msprop:Generator_UserTableName="przychody">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PrzId" msprop:Generator_ColumnPropNameInRow="PrzId" msprop:Generator_ColumnPropNameInTable="PrzIdColumn" msprop:Generator_ColumnVarNameInTable="columnPrzId" msprop:Generator_UserColumnName="PrzId" type="xs:long" minOccurs="0" />
+              <xs:element name="PrzNazwa" msprop:Generator_ColumnPropNameInRow="PrzNazwa" msprop:Generator_ColumnPropNameInTable="PrzNazwaColumn" msprop:Generator_ColumnVarNameInTable="columnPrzNazwa" msprop:Generator_UserColumnName="PrzNazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="PrzKwota" msprop:Generator_ColumnPropNameInRow="PrzKwota" msprop:Generator_ColumnPropNameInTable="PrzKwotaColumn" msprop:Generator_ColumnVarNameInTable="columnPrzKwota" msprop:Generator_UserColumnName="PrzKwota" type="xs:long" minOccurs="0" />
+              <xs:element name="PrzKat" msprop:Generator_ColumnPropNameInRow="PrzKat" msprop:Generator_ColumnPropNameInTable="PrzKatColumn" msprop:Generator_ColumnVarNameInTable="columnPrzKat" msprop:Generator_UserColumnName="PrzKat" type="xs:string" minOccurs="0" />
+              <xs:element name="PrzData" msprop:Generator_ColumnPropNameInRow="PrzData" msprop:Generator_ColumnPropNameInTable="PrzDataColumn" msprop:Generator_ColumnVarNameInTable="columnPrzData" msprop:Generator_UserColumnName="PrzData" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrzOpis" msprop:Generator_ColumnPropNameInRow="PrzOpis" msprop:Generator_ColumnPropNameInTable="PrzOpisColumn" msprop:Generator_ColumnVarNameInTable="columnPrzOpis" msprop:Generator_UserColumnName="PrzOpis" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
